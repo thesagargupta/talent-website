@@ -1,13 +1,18 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './TalentListPage.css'
 
 function TalentListPage() {
   const navigate = useNavigate()
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
   const handleGoBack = () => {
-    navigate('/')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setTimeout(() => navigate('/'), 300)
   }
 
   return (

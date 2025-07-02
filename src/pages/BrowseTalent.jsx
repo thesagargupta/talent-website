@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './BrowseTalent.css'
 
@@ -7,8 +7,13 @@ function BrowseTalent() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('')
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
   const handleGoBack = () => {
-    navigate('/')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setTimeout(() => navigate('/'), 300)
   }
 
   // Sample talent data

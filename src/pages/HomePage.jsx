@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './HomePage.css'
 
 function HomePage() {
   const navigate = useNavigate()
   
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+  
   const handleListTalent = () => {
-    navigate('/list-talent')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setTimeout(() => navigate('/list-talent'), 300)
   }
 
   const handleBrowseTalents = () => {
-    navigate('/browse-talents')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setTimeout(() => navigate('/browse-talents'), 300)
   }
 
   const featuredCategories = [
